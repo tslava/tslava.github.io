@@ -2,3 +2,5 @@ theme: minima
 title: Клуб "Польские истории"
 author: tslava
 description: test
+markdown: kramdown
+permalink: pretty
