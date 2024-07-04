@@ -1,3 +1,25 @@
+---
+title: "Аэродром во Вжещче"
+---
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аэродром во Вжещче</title>
+    <meta property="og:title" content="Аэродром во Вжещче" />
+    <meta property="og:description" content="A brief description of your page." />
+    <meta property="og:image" content="https://yourdomain.com/path/to/your/image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com/path/to/your/page" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Аэродром во Вжещче" />
+    <meta name="twitter:description" content="A brief description of your page." />
+    <meta name="twitter:image" content="https://yourdomain.com/path/to/your/image.jpg" />
+    <meta name="twitter:url" content="https://yourdomain.com/path/to/your/page" />
+</head>
+<body>
+
 *Бронислав Пожьняк (Bronisław Poźniak)*
 
 *6 января 2024*
