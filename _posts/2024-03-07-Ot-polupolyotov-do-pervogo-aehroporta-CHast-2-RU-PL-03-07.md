@@ -1,7 +1,3 @@
----
-title: "Аэродром во Вжещче"
----
-
 <html>
 <head>
     <meta charset="UTF-8">
@@ -279,7 +275,8 @@ Po II wojnie światowej i przejęciu lotniska z rąk Armii Czerwonej w 1946 r. o
 
 Po oddaniu nowego betonowego pasa o długości 1800 m w 1948 r. lotnisko jako drugie w kraju (po Okęciu) stało się cywilnym portem lotniczym z obsługą celną.
 
-<br>
+</body>
+</html>
 
 Аэропорт во Вжешче функционировал до 30 марта 1974 года. Через месяц, 1 мая, на новом аэропорту в Рембехове приземлился первый самолет из Вроцлава.
 
