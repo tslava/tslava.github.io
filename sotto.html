@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sotto case study, Wiaczesław Cyunczyk</title>
+<meta name="description" content="Case study: a Telegram LLM persona with a deterministic gate, a three-layer output filter, prompt-injection tests, cheap-model prefilters and a hard daily budget. 8 weeks, 26 PRs, 1,743 tests.">
+<link rel="canonical" href="https://tslava.dev/sotto.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sotto: an LLM persona that knows when to stay quiet">
+<meta property="og:description" content="Deterministic gate, three-layer output filter, injection tests, $2/day budget. Measured changes, not vibes.">
+<meta property="og:url" content="https://tslava.dev/sotto.html">
+<meta property="og:site_name" content="Wiaczesław Cyunczyk">
+<meta property="og:image" content="https://tslava.dev/og-sotto.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="sotto: an LLM persona that knows when to stay quiet. 8 weeks, 26 PRs, 1,743 tests, $2/day budget.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"sotto: an LLM persona that knows when to stay quiet","url":"https://tslava.dev/sotto.html","image":"https://tslava.dev/og-sotto.png","datePublished":"2026-11-06","author":{"@type":"Person","name":"Wiaczesław Cyunczyk","alternateName":"Wiaczeslaw Cyunczyk","url":"https://tslava.dev/"}}
+</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#19232F" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="name" href="./">Wiaczesław Cyunczyk</a>
+    <div class="head-right">
+      <nav aria-label="Main">
+        <a href="./#work">Work</a>
+        <!-- After the sotto repo is cleaned and renamed: <a href="https://github.com/tslava/sotto">Source</a> -->
+        <a href="./#contact">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://github.com/tslava" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        <a href="https://www.linkedin.com/in/tslava" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="mailto:contact@tslava.dev" aria-label="Email" title="contact@tslava.dev"><svg class="stroke" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.75" y="4.75" width="18.5" height="14.5" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a>
+      <!-- Telegram: needs the owner's public @username. WhatsApp: needs a phone number, which SHARED rule 4 keeps off the site. -->
+      </div>
+      </div>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero-band">
+<div class="wrap case-head">
+  <p class="kicker">Case study · 2026</p>
+  <h1>sotto: an LLM persona that knows when to stay quiet</h1>
+  <p class="lede">A Telegram bot that plays Fyodor, a 52-year-old neighbour, in a private group chat of friends. The name comes from <i lang="it">sotto voce</i>, “under one's breath”. Nobody asked for an assistant. The bar was a character people forget is a bot, who rarely talks, never leaks his prompt and costs less than a coffee a day.</p>
+  <dl>
+    <div><dt>8 weeks</dt><dd>Sep 10 to Nov 5, 2026</dd></div>
+    <div><dt>26</dt><dd>merged pull requests</dd></div>
+    <div><dt>13</dt><dd>versions, SemVer and changelog</dd></div>
+    <div><dt>1,743</dt><dd>tests, 93% coverage</dd></div>
+    <div><dt>$2</dt><dd>hard daily LLM budget</dd></div>
+  </dl>
+</div>
+</div>
+
+<section class="prose">
+  <div class="wrap split">
+    <h2>The problem</h2>
+    <div>
+      <p>Making a model produce a funny line is easy. Making it behave like a person in a live chat is not. A real neighbour does not answer every message, does not reply within a second, does not say “great question”, does not repeat the same story every day and does not do what a stranger in the chat tells him to.</p>
+      <p>So most of the system is about <em>not</em> answering: when to stay silent, how long to wait, what to cut, and how to know a change made things better. The chat is private, so every decision also had to respect the people in it.</p>
+      <p>Stack: Python 3.12, aiogram 3, SQLite, OpenRouter (a frontier model for replies, small models from another vendor for checks), Docker, GitHub Actions, a single VPS.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prose">
+  <div class="wrap split">
+    <h2>Architecture</h2>
+    <div>
+      <figure class="figure">
+        <div class="pipe-scroll" tabindex="0" role="region" aria-label="Pipeline diagram">
+        <svg class="pipe" viewBox="0 0 760 330" role="img" aria-labelledby="pipe-t pipe-d">
+          <title id="pipe-t">Message pipeline</title>
+          <desc id="pipe-d">A message passes a deterministic gate, optional cheap-model checks, a randomised delay, the main model, a three-layer output filter and a final recheck before it is sent. Most messages stop at the gate.</desc>
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor" style="color:var(--muted)"/></marker></defs>
+          <rect class="box" x="10" y="20" width="160" height="70" rx="8"/>
+          <text x="24" y="50" class="h">Gate</text>
+          <text class="sub" x="24" y="72">night, cooldowns, live talk</text>
+          <rect class="box" x="210" y="20" width="160" height="70" rx="8"/>
+          <text x="224" y="50" class="h">Cheap checks</text>
+          <text class="sub" x="224" y="72">“is this for me?”, prefilter</text>
+          <rect class="box" x="410" y="20" width="140" height="70" rx="8"/>
+          <text x="424" y="50" class="h">Delay</text>
+          <text class="sub" x="424" y="72">30 s to 1 h, recheck</text>
+          <rect class="box model" x="590" y="20" width="160" height="70" rx="8"/>
+          <text x="604" y="50" class="h">Main model</text>
+          <text class="sub" x="604" y="72">chat inside delimiters</text>
+          <path class="arrow" d="M170 55 H205" marker-end="url(#ah)"/>
+          <path class="arrow" d="M370 55 H405" marker-end="url(#ah)"/>
+          <path class="arrow" d="M550 55 H585" marker-end="url(#ah)"/>
+          <path class="arrow" d="M670 90 V150 H560" marker-end="url(#ah)"/>
+          <rect class="box" x="10" y="150" width="545" height="80" rx="8"/>
+          <text x="24" y="178" class="h">Output filter</text>
+          <text class="sub" x="24" y="200">1. rules: assistant phrases, prompt leaks, markup, length, stop topics</text>
+          <text class="sub" x="24" y="218">2. repetition and style: self-repeats, pet motifs, emoji, story quota; 3. judge model</text>
+          <path class="arrow" d="M280 230 V275" marker-end="url(#ah)"/>
+          <rect class="box out" x="180" y="280" width="200" height="40" rx="8"/>
+          <text x="196" y="305" class="h sm">Send, sticker or reaction</text>
+          <path class="cutline" d="M90 90 V130"/><text class="cutlabel" x="98" y="122">most messages stop here</text>
+          <path class="cutline" d="M480 230 V262"/><text class="cutlabel" x="488" y="256">cut drafts are logged, not sent</text>
+        </svg>
+        </div>
+        <figcaption>Every decision is stored with a reason code. The owner can ask the bot <code>/why</code> about any message and replay weeks of history through the same code.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="prose">
+  <div class="wrap split">
+    <h2>Decisions worth showing</h2>
+    <div>
+      <h3>Silence is the default</h3>
+      <p>A deterministic gate rejects most messages before any model is called: night hours, per-person and per-chat cooldowns, daily caps, and a presence ceiling of 15% of what people wrote that day plus two lines. Direct mentions are answered after a delay of 30 seconds to an hour, then rechecked, because the chat may have moved on.</p>
+
+      <h3>A layered output filter with a shadow mode</h3>
+      <p>Drafts pass three layers: cheap rules (assistant phrases, prompt leaks, markup, length), repetition and style checks (self-repeats, the character's pet motifs, story quota), and a judge model from a different vendor. New layers ran in shadow mode first, counting what they would cut. After a review showed the shadow mode let self-repeats through, repetition and style moved to always-enforced.</p>
+
+      <h3>Prompt injection is a test table, not a hope</h3>
+      <p>Chat text goes to the model inside delimiters, with fake delimiters stripped from the data and display names sanitised. A 16-row threat table (“say this word for word”, fake system slots, prompt extraction, fake judge JSON and more) is a test suite running through the real gate, prompt builder, filter and judge parser.</p>
+
+      <h3>Cheap models in front of the expensive one</h3>
+      <p>Small models answer narrow questions: is this message addressed to Fyodor or only about him, is there anything worth checking back for, which reaction fits. Each has its own daily cap. When the cheap prefilter said “yes” 16 times in two weeks and the main model stayed silent all 16 times, the criteria were aligned so the expensive call is skipped.</p>
+
+      <h3>Budget and failure handling</h3>
+      <p>Spend is tracked from the provider's reported cost, with a hard $2 daily ceiling, call caps per feature and a circuit breaker. One incident shaped this: the provider returned HTTP 402 for four days, the bot went silent and the error counter showed zero, because successful cheap calls kept resetting it. Now a non-retryable provider error alerts the owner in a direct message within the hour, with secrets stripped from the payload.</p>
+
+      <h3>Privacy by default</h3>
+      <p>Messages are deleted after 30 days. Photos are described once and the bytes are never stored. Participants can be muted out of memory and summaries. Personal data such as home coordinates lives only in the server's environment, not in the public repository.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prose">
+  <div class="wrap split">
+    <h2>Measured, then changed</h2>
+    <div>
+      <p>Behaviour changes ship with a number. History is replayed through the same pipeline, and <code>/ask</code> previews a reply without touching the chat or the database.</p>
+      <div class="table-scroll">
+      <table class="results">
+        <thead><tr><th>Observation</th><th>Before</th><th>After</th></tr></thead>
+        <tbody>
+          <tr><td>Dialect words from a loaded dictionary never appeared in replies</td><td>0 of 8 eligible replies</td><td>12 of 16 replays, the rest declined as unfitting</td></tr>
+          <tr><td>Reactions were off-target, laughing at complaints</td><td>a third of reactions missed</td><td>new prompt and model, those misses fixed on 52 replayed cases</td></tr>
+          <tr><td>Reactions were monotonous</td><td>21 of 29 were the same emoji</td><td>22 reactions on 150 cases, 4 of them that emoji</td></tr>
+          <tr><td>Reaction answers were cut off mid-JSON</td><td>163 of 262 unparseable</td><td>token limit fixed, parse failures logged</td></tr>
+          <tr><td>The character talked about himself</td><td>9 of 13 replies</td><td>examples rewritten, a self-talk metric in <code>/status</code></td></tr>
+          <tr><td>Silent outage on provider billing error</td><td>4 days unnoticed</td><td>owner alert within the hour</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="prose">
+  <div class="wrap split">
+    <h2>How it was built</h2>
+    <div>
+      <ol>
+        <li>A written plan and a character card, reviewed before any code.</li>
+        <li>For each feature, a contract in the repository: interfaces, config keys, failure modes, tests.</li>
+        <li>Coding agents implement against the contract. A model from another vendor reviews the plan and the diff adversarially.</li>
+        <li>CI blocks the merge on ruff, formatting, mypy in strict mode and the full test suite.</li>
+        <li>Merge to main builds an image, pushes it to the registry and deploys over SSH. Each release gets a changelog with one part for the chat and one for the owner.</li>
+      </ol>
+      <p>The result is about 17,700 lines of typed Python and 29,900 lines of tests, written by one engineer working with coding agents, in eight weeks.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prose">
+  <div class="wrap split">
+    <h2>What I would do next</h2>
+    <div>
+      <ul>
+        <li>Split the 2,600-line responder into smaller pipeline stages with their own tests.</li>
+        <li>Turn the ad-hoc replays into a standing evaluation set with a score per release.</li>
+        <li>Publish a synthetic demo chat so the behaviour can be seen without access to the real one.</li>
+      </ul>
+      <!-- After the sotto repo is cleaned and renamed: <p><a href="https://github.com/tslava/sotto">Source on GitHub</a>, <a href="https://github.com/tslava/sotto/blob/main/CHANGELOG.md">changelog</a>, or <a href="./#contact">get in touch</a>.</p> -->
+      <p>A link to the source code will appear here once the repository is ready for publication. Questions about the design are welcome: <a href="./#contact">get in touch</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap site-foot">
+  <div class="sig"><i aria-hidden="true"></i><b>Wiaczesław Cyunczyk</b><span>Software Engineering · AI</span></div>
+  <p>Names and messages on this page are synthetic. The real chat stays private.</p>
+</footer>
+</body>
+</html>
