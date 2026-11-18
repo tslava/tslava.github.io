@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI ambassador case study: Bringing AI into an engineering team, not just into my own editor</title>
+<meta name="description" content="From personal experiments to a shared, safe setup: roadmap, a team toolkit of agent skills, 10+ colleagues onboarded.">
+<link rel="canonical" href="https://tslava.dev/ai-ambassador.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI ambassador case study: Bringing AI into an engineering team, not just into my own editor">
+<meta property="og:description" content="From personal experiments to a shared, safe setup: roadmap, a team toolkit of agent skills, 10+ colleagues onboarded.">
+<meta property="og:url" content="https://tslava.dev/ai-ambassador.html">
+<meta property="og:site_name" content="Wiaczesław Cyunczyk">
+<meta property="og:image" content="https://tslava.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI ambassador case study: Bringing AI into an engineering team, not just into my own editor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tslava.dev/og.png">
+<meta name="twitter:image:alt" content="AI ambassador case study: Bringing AI into an engineering team, not just into my own editor">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://tslava.dev/ai-ambassador.html#article","headline":"Bringing AI into an engineering team, not just into my own editor","description":"From personal experiments to a shared, safe setup: roadmap, a team toolkit of agent skills, 10+ colleagues onboarded.","url":"https://tslava.dev/ai-ambassador.html","mainEntityOfPage":"https://tslava.dev/ai-ambassador.html","inLanguage":"en","isPartOf":{"@id":"https://tslava.dev/#website"},"author":{"@type":"Person","@id":"https://tslava.dev/#person","name":"Wiaczesław Cyunczyk","url":"https://tslava.dev/"},"dateModified":"2026-11-17"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tslava.dev/"},{"@type":"ListItem","position":2,"name":"AI ambassador","item":"https://tslava.dev/ai-ambassador.html"}]}]}
+</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1F2B38" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="styles.css?v=54658229">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="page layout">
+<aside class="side" aria-label="Profile">
+<div class="card">
+  <img class="avatar" src="photo.jpg" width="112" height="112" alt="">
+  <p class="nm"><a href="./">Wiaczesław Cyunczyk</a></p>
+  <p class="role">Staff-level software engineer<br>Poland (CET)</p>
+  <span class="socials"><a href="https://github.com/tslava" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a href="https://www.linkedin.com/in/tslava" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="mailto:contact@tslava.dev" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg></a></span>
+  <hr>
+  <nav aria-label="On this page"><ol class="toc"><li><a href="#what-i-did">What I did</a></li><li><a href="#result">Result</a></li></ol></nav>
+</div>
+</aside>
+<main id="main">
+<article class="doc">
+<p class="kicker">Case study · At work · since 2022</p>
+<h1>Bringing AI into an engineering team, not just into my own editor</h1>
+<dl class="facts">
+  <div><dt>Strength</dt><dd>Bringing AI into an engineering team</dd></div>
+  <div><dt>My role</dt><dd>AI ambassador</dd></div>
+  <div><dt>Stack</dt><dd>Claude Code · Codex · Cursor · MCP · Agent Skills</dd></div>
+</dl>
+
+<p>I have been the AI ambassador at a smart parking company since 2022, when GitHub Copilot came out. Since mid-2025 I have led company-wide AI adoption. AI coding tools were changing every month, and developers were using them on their own, each with a different setup and none with access to our code, docs and data. My job was to turn that into a shared way of working.</p>
+
+<h2 id="what-i-did">What I did</h2>
+<ul>
+  <li><b>Explored first.</b> Long before it was a plan, since the first ChatGPT and GitHub Copilot, I kept showing colleagues what AI can do. Then I followed where the tools were going, ran pilots, used agents on my own tasks and showed the team the results. Then I introduced Claude Code to the team.</li>
+  <li><b>Wrote the roadmap.</b> A plan with nine directions for AI in our development process, starting from the foundation everything else needs: giving agents real knowledge of our codebase.</li>
+  <li><b>Built a shared toolkit.</b> A team repository of agent skills and settings. Our own conventions, from deployment patterns to how we squash commits, became skills, so every developer's agent follows the team's rules out of the box.</li>
+  <li><b>Built the infrastructure.</b> An internal server that gives any AI tool access to company context with security built in: sign-in through the company account, a reviewed list of what each system may answer, and no access to secrets. The team is not tied to one vendor: people use it from Claude Code, Codex or Cursor. Because the assistant can read across our systems, from logs to how the infrastructure is set up, investigating incidents and customer problems became fast: bottlenecks and causes are found and fixed quickly, which took a lot of load off support. On top of it: a company memory layer, an assistant for customer email, and an audit that keeps our documentation true.</li>
+  <li><b>Measured, not trusted blindly.</b> The assistants' output is checked against human judgement, and they keep learning from real use, with people approving what they learn.</li>
+  <li><b>Taught.</b> Workshops and demos, pair work, guides and a lot of answered questions. I helped 10+ colleagues start working with agents.</li>
+</ul>
+
+<h2 id="result">Result</h2>
+<p>AI went from personal experiments to a shared, safe setup the whole team works with every day.</p>
+
+<p class="note">Last updated: <time datetime="2026-11-17">November 2026</time></p>
+
+<aside class="callout">
+<p>A work case, shared at a public level of detail. More on a call. Questions are welcome: <a href="mailto:contact@tslava.dev">contact@tslava.dev</a>.</p>
+</aside>
+<p class="pager"><a href="./">← Home</a><a href="sotto.html">Next: sotto →</a></p>
+</article>
+</main>
+</div>
+
+<footer class="site-foot">
+  <div class="page foot-in">
+    <span>© 2026 Wiaczesław Cyunczyk</span>
+    <span><a href="mailto:contact@tslava.dev">Email</a> · <a href="https://www.linkedin.com/in/tslava">LinkedIn</a> · <a href="https://github.com/tslava">GitHub</a> · <a href="https://github.com/tslava/tslava.github.io">Source</a></span>
+  </div>
+</footer>
+<script>
+(()=>{const l=[...document.querySelectorAll('.toc a')];if(!l.length||!('IntersectionObserver' in window))return;
+const s=id=>l.forEach(a=>a.getAttribute('href')==='#'+id?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current'));
+const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)s(e.target.id)}),{rootMargin:'0px 0px -70% 0px'});
+document.querySelectorAll('.doc h2[id]').forEach(h=>o.observe(h))})();
+</script>
+</body>
+</html>

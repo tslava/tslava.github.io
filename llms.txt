@@ -1,0 +1,29 @@
+# Wiaczesław Cyunczyk
+
+> Staff-level software engineer, 10+ years in backend. I build reliable high-load backends and bring AI into engineering teams. Consulting and collaboration.
+
+Based in Poland (CET). Open to consulting and collaboration. Last updated: 2026-11-17.
+
+## Case studies
+
+- [Giving AI assistants company context without giving them the keys](https://tslava.dev/internal-mcp-server.html): Gives the team's AI tools our code (100+ repositories), docs and live data, with security built in.
+- [Making the documentation tell the truth again](https://tslava.dev/docs-code-audit.html): An LLM judge checked against a hand-labelled sample, plus claim-by-claim checks against code, schema and infrastructure.
+- [The backend behind parking signs that show the right number](https://tslava.dev/digital-signage-backend.html): One backend drives LED parking signs over LoRaWAN on two networks, with monitoring and alerts.
+- [Bringing AI into an engineering team, not just into my own editor](https://tslava.dev/ai-ambassador.html): From personal experiments to a shared, safe setup: roadmap, a team toolkit of agent skills, 10+ colleagues onboarded.
+- [sotto: an LLM persona that knows when to stay quiet](https://tslava.dev/sotto.html): A Telegram LLM persona with a deterministic gate, a 3-layer output filter and a hard $2/day budget. 8 weeks, 1,743 tests.
+- [nwarning: a browser extension so nobody mistakes production for dev](https://tslava.dev/nwarning.html): A Chrome and Firefox extension, so nobody mistakes production for dev. Part of my team uses it at work.
+
+## Personal projects
+
+- [proofbrain](https://github.com/tslava/proofbrain): A company brain for AI agents, with proof the output is good: an MCP server with shared memory, hybrid search, an email loop and an eval harness.
+- [agent-kit](https://github.com/tslava/agent-kit): Plugins for AI coding agents: skills, commands and hooks from real engineering work.
+- [sotto](https://github.com/tslava/sotto): A Telegram group-chat persona engine: a chat regular, not an assistant. Persona packs, layered output filters, golden tests.
+- [kopernikadr](https://github.com/tslava/kopernikadr): A home stop-motion studio: a phone over the table is the camera, a tablet is the remote with live preview, onion skin and video export. Two apps in two evenings with AI agents.
+- [nwarning](https://github.com/tslava/nwarning): A Chrome and Firefox extension that marks production with a red banner and switches environments in one click. Part of my team uses it at work.
+- [salt-and-stone](https://github.com/tslava/salt-and-stone): A small browser climbing game for phones, plain JS and Canvas 2D.
+
+## Contact
+
+- [Email](mailto:contact@tslava.dev)
+- [LinkedIn](https://www.linkedin.com/in/tslava)
+- [GitHub](https://github.com/tslava)

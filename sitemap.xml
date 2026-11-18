@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tslava.dev/</loc><lastmod>2026-11-09</lastmod></url>
-  <url><loc>https://tslava.dev/sotto.html</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://tslava.dev/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://tslava.dev/internal-mcp-server.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://tslava.dev/docs-code-audit.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://tslava.dev/digital-signage-backend.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://tslava.dev/ai-ambassador.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://tslava.dev/sotto.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://tslava.dev/nwarning.html</loc><lastmod>2026-11-17</lastmod></url>
 </urlset>
